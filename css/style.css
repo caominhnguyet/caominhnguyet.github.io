@@ -1335,3 +1335,311 @@ body{
 .project-card .project-btn:hover {
     background: #1d4ed8;
 }
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
+
+.projects-section {
+    padding: 50px 4%;
+}
+
+.project-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   NORMAL PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    padding: 28px !important;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-avatar {
+    width: 100% !important;
+    height: 105px !important;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 0 22px;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+   ========================================================= */
+
+.project-card h2 {
+    color: #172b4d;
+
+    font-size: 24px;
+    line-height: 1.3;
+
+    margin: 0 0 12px;
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+.project-card > p {
+    color: #60738f;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    margin: 0 0 20px;
+}
+
+
+/* =========================================================
+   VIEW PROJECT BUTTON
+   ========================================================= */
+
+.project-btn {
+    display: inline-block;
+
+    width: auto !important;
+
+    align-self: flex-start;
+
+    background: #2864e8;
+    color: #ffffff;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 11px 28px;
+
+    border-radius: 9px;
+
+    margin: 0 0 22px;
+
+    box-sizing: border-box;
+
+    transition: background 0.2s ease;
+}
+
+.project-btn:hover {
+    background: #174fc7;
+}
+
+
+/* =========================================================
+   DOCUMENT INFORMATION
+   ========================================================= */
+
+.document-info {
+    width: 100%;
+
+    margin: 0 !important;
+
+    padding: 18px 0 0 !important;
+
+    border-top: 1px solid #e5eaf2;
+
+    box-sizing: border-box;
+}
+
+.document-title {
+    color: #60738f;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin: 0 0 11px;
+}
+
+.document-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.document-tags span {
+    display: inline-block;
+
+    background: #f1eaff;
+    color: #7653d6;
+
+    font-size: 12px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   API TESTING CARD
+   ========================================================= */
+
+.api-project-card {
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 22px 26px !important;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    column-gap: 25px;
+    row-gap: 12px;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* Put API card beside MoMo */
+
+.api-project-card {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+.api-project-content h2 {
+    color: #172b4d;
+
+    font-size: 22px;
+
+    margin: 0 0 7px;
+}
+
+.api-project-content p {
+    color: #60738f;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* API button */
+
+.api-project-card .project-btn {
+    width: auto !important;
+
+    grid-column: 2;
+    grid-row: 1;
+
+    align-self: center;
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+
+/* API document section */
+
+.api-document-info {
+    grid-column: 1 / 3;
+
+    width: 100%;
+
+    margin: 5px 0 0 !important;
+
+    padding: 14px 0 0 !important;
+
+    border-top: 1px solid #e5eaf2;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .project-container {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .api-project-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .projects-section {
+        padding: 35px 18px;
+    }
+
+    .project-card {
+        padding: 22px !important;
+    }
+
+    .project-avatar {
+        height: 90px !important;
+    }
+
+    .api-project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .api-project-card .project-btn {
+        width: auto !important;
+        align-self: flex-start;
+    }
+
+}
